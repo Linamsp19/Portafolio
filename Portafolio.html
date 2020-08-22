@@ -152,16 +152,16 @@
 
        const menu = document.querySelector('.menu')
        console.log(menu)
-       const iconmenu = document.querySelector('#burger-menu');
+       const iconmenu = document.querySelector('#icon-menu');
        console.log(iconmenu)
        menu.classList.add('is-active');
 
-       burgermenu.addEventListener('click, hideShow')
+       menu.addEventListener('click, hideShow')
 
-       function hideShow()
+       function hideShow() {
        if (menu.classList.contains('is-active')) {
         menu.classList.remove('is-active');
-       }else {
+       } else {
         menu.classList.add('is-active');
         }
        }
