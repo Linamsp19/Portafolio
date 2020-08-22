@@ -398,12 +398,20 @@ background-position-y: 5px;
   flex-wrap: wrap;
 }
 
-.burger-button {
+.icon-menu:before {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: blue;
-  display: block;
+  background-color: rgba(0, 0, 0, .8);
+  display: none;
+  line-height: 42px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: white;
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -451,6 +459,10 @@ h1 {
 
 @media screen and (max-width: 767px) {
 
+  .icon-menu:before {
+    display: block;
+  }
+
   }
   .header {
     display: block;
@@ -465,9 +477,31 @@ h1 {
   }
   .header a {
     justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: .5em;
   }
   .header .logo {
     text-align: center;
+  }
+
+  .menu{
+    position: fixed;
+    background: rgba(5, 111, 255, .9);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    /*height: 100vh;*/
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .menu.is-active {
+    left: 0;
   }
   .project {
     display: block;
